@@ -147,17 +147,38 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="Comanda.cpp" />
     <ClCompile Include="Drona.cpp" />
+    <ClCompile Include="DronaValidator.cpp" />
     <ClCompile Include="Laborator8.cpp" />
+    <ClCompile Include="Serializer.cpp" />
+    <ClCompile Include="Serie.cpp" />
+    <ClCompile Include="Service.cpp" />
     <ClCompile Include="Telefon.cpp" />
-    <ClCompile Include="testTelefon.cpp" />
+    <ClCompile Include="TelefonValidator.cpp" />
+    <ClCompile Include="TestDomain.cpp" />
+    <ClCompile Include="testRepository.cpp" />
+    <ClCompile Include="UI.cpp" />
+    <ClCompile Include="User.cpp" />
+    <ClCompile Include="Utilites.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Comanda.h" />
+    <ClInclude Include="CustomFileRepo.h" />
     <ClInclude Include="Drona.h" />
+    <ClInclude Include="DronaValidator.h" />
+    <ClInclude Include="Exceptions.h" />
+    <ClInclude Include="Repository.h" />
+    <ClInclude Include="RepositoryFile.h" />
+    <ClInclude Include="RepositoryFileCSV.h" />
+    <ClInclude Include="Serializer.h" />
+    <ClInclude Include="Serie.h" />
+    <ClInclude Include="Service.h" />
     <ClInclude Include="Telefon.h" />
+    <ClInclude Include="TelefonValidator.h" />
+    <ClInclude Include="TestRepository.h" />
     <ClInclude Include="TestsDomain.h" />
+    <ClInclude Include="UI.h" />
+    <ClInclude Include="User.h" />
+    <ClInclude Include="Utilites.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

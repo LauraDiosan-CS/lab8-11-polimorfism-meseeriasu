@@ -1,12 +1,18 @@
 #pragma once
-#include "Comanda.h"
+#include <string>
+#include "Serie.h"
 
-class Drona : public Comanda {
+class Drona : public Serie {
 	private:
 		int numarRotoare;
 	public:
 		Drona();
-		Drona(const char*, const char*, int, int);
+		Drona(string, string, int, int);
+		Drona(string, char);
+		void setNumarRotoare(int);
 		int getNumarRoatoare();
+		Serie* clone();
+		string toString();
+		string toStringDelimiter(char);
 		~Drona();
 };

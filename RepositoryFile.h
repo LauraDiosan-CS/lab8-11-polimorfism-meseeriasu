@@ -1,63 +1,41 @@
 #pragma once
-#include "RepoTemplate.h"
-#include <fstream>
-#include <string.h>
-using namespace std;
-
-
-template<class T> class RepositoryFile : public RepoTemplate<T> {
-	private:
-		const char* fis;
-	public:
-		RepositoryFile();
-		RepositoryFile(const char*);
-		void loadFromFile(const char*);
-		void saveToFile();
-		~RepositoryFile();
+#include "Serializer.h"
+#include "Repository.h"
+template <class T> class RepositoryFile : public Repository<T>
+{
+protected:
+	const char* fileName;
+public:
+	RepositoryFile();
+	RepositoryFile(const char*);
+	virtual void saveToFile();
+	virtual void loadFromFile();
+	~RepositoryFile();
 };
 
+
 template<class T>
-RepositoryFile<T>::RepositoryFile() {
+RepositoryFile<T>::RepositoryFile() :Repository<T>()
+{
 }
 
 template<class T>
-RepositoryFile<T>::RepositoryFile(const char* fileName) {
-	fis = fileName;
-	string linie;
-	ifstream fin(fileName);
-	while (getline(fin, linie))
-	{
-		T m(linie);
-		addElem(m);
-	}
-	fin.close();
+RepositoryFile<T>::RepositoryFile(const char* name)
+{
+	fileName = name;
 }
 
 template<class T>
-void RepositoryFile<T>::loadFromFile(const char* fileName) {
-	elem.clear();
-	fis = fileName;
-	string linie;
-	ifstream fin(fileName);
-	while (getline(fin,linie))
-	{
-		T m(linie);
-		addElem(m);
-	}
-	fin.close();
+RepositoryFile<T>::~RepositoryFile()
+{
 }
 
 template<class T>
-void RepositoryFile<T>::saveToFile() {
-	ofstream fout(fis);
-	typename list<T>::iterator it = elem.begin();
-	for (int i = 0;i < size();i++)
-	{
-		fout << (*it);
-		advance(it, 1);
-	}
+void RepositoryFile<T>::saveToFile()
+{
 }
 
 template<class T>
-RepositoryFile<T>::~RepositoryFile() {
+void RepositoryFile<T>::loadFromFile()
+{
 }
