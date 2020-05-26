@@ -2,10 +2,11 @@
 #include "Vapor.h"
 
 class Razboi : public Vapor {
-private:
-	bool poz[5] = { false };
 public:
-	Razboi();
+	Razboi(int, int, int, int, int, int);
+	bool isDifferent(Vapor*);
+	int getMatrice(int, int);
+	void incrementMatrice(int, int);
 	bool getStatus();
 	~Razboi();
 };

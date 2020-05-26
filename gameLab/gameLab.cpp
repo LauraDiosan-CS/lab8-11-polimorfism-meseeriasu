@@ -8,9 +8,10 @@ using namespace std;
 
 int main()
 {
-	Repository<Vapor*>* repo;
-	repo = new Repository<Vapor*>;
-	Service service(repo);
+	Repository<Vapor*>* player, *calculator;
+	player = new Repository<Vapor*>;
+	calculator = new Repository<Vapor*>;
+	Service service(player, calculator);
 	UI ui(service);
-	ui.showMenu();
+	ui.run();
 }

@@ -2,10 +2,11 @@
 #include "Vapor.h"
 
 class Yacht : public Vapor {
-private:
-	bool poz[3] = { false };
 public:
-	Yacht();
+	Yacht(int, int, int, int, int, int);
+	int getMatrice(int, int);
+	bool isDifferent(Vapor*);
+	void incrementMatrice(int, int);
 	bool getStatus();
 	~Yacht();
 };

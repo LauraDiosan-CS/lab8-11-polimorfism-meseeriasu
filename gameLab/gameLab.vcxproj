@@ -147,15 +147,18 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="DomainValidator.cpp" />
     <ClCompile Include="gameLab.cpp" />
     <ClCompile Include="Service.cpp" />
-    <ClCompile Include="Source.cpp" />
     <ClCompile Include="Submarine.cpp" />
     <ClCompile Include="UI.cpp" />
+    <ClCompile Include="Vapor.cpp" />
     <ClCompile Include="VasRazboi.cpp" />
     <ClCompile Include="Yacht.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="DomainValidator.h" />
+    <ClInclude Include="Exceptions.h" />
     <ClInclude Include="Repository.h" />
     <ClInclude Include="Service.h" />
     <ClInclude Include="Submarine.h" />
